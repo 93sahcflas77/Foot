@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: #aaa;
+    font-family: cursive;
+    font-weight: 500;
+}
+
+*::before, *::after{
+    margin: 0;
+    padding: 0;
+}
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: green;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: rgb(204, 190, 190);
+}
+
+
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem ;
+    background-color: #fff;
+    box-shadow: 0 5px 25px rgba(0,0,0,.2);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+header img{
+    width: 12rem;
+}
+
+header ul li{
+    display: inline;
+    margin-left: 1rem;
+}
+
+header ul li a{
+    font-size: 1.2rem;
+}
+
+header ul li a:hover{
+    color: green
+}
+
+#menu{
+    display: none;
+    border: 1px solid #aaa;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 22px;
+    color: #7e7979;
+    cursor: pointer;
+}
+
+
+
+.toggle{
+    display: block;
+    border-top: 1px solid rgba(182, 165, 165, 0.1);
+}
+
+
+
+
+.home{
+    display: block;
+    background-image: url('/image/11.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    /* width: 65rem; */
+    padding: 10rem;
+    padding-bottom: 14rem;
+    padding-right: 30%;
+}
+
+.home .content h2{
+    color: green;
+    font-size: 3rem;
+}
+
+.home .content  p{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.home .content button{
+    border: none;
+    background-color: gray;
+    border-radius: 2px;
+}
+
+
+.home .content button:hover{
+    background-color: rgb(85, 83, 83);
+}
+.home .content a{
+    display: block;
+    padding: 0.6rem;
+    color: white;
+    font-size: 1rem;
+}
+
+
+
+.protuct, .about, .service{
+    width: 80%;
+    margin: 5rem auto;
+}
+
+.protuct h2, .about h2{
+    text-align: center;
+    color: green;
+    font-size: 2rem;
+    margin-bottom: 2.3rem;
+}
+
+.protuct .box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.protuct .box-container .box{
+    border: 1px solid rgb(163, 160, 160);
+    width: 20rem;
+    border-radius: 4px;
+    padding: 0.8rem 1rem;
+    padding-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.8rem;
+}
+
+
+.protuct .box-container img{
+    text-align: center;
+    width: 14rem;
+    height: 13rem;
+    object-fit: cover;
+    border: 1px solid rgb(163, 160, 160);
+    border-radius: 3px;
+}
+
+.protuct .box-container .box h3{
+    color: green;
+    letter-spacing: 1.5px;
+    font-size: 1.2rem;
+    line-height: 10px;
+}
+
+.protuct .box-container .box .star li{
+    display: inline;
+    margin-left: 0.2rem;
+    font-size: 22px;
+}
+
+.protuct .box-container .box .star li i{
+    color: gold;
+}
+
+.protuct .box-container .box .price span:nth-child(1){
+    margin-right: 0.2rem;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+.protuct .box-container .box .price span:nth-child(2){
+    font-size: 19px;
+    color: rgb(95, 93, 93);
+}
+
+.protuct .box-container .box .icon{
+    margin-top: 0.8rem;
+}
+
+.protuct .box-container .box .icon li{
+    display: inline;
+    border: 1px solid rgb(161, 154, 154);
+    padding: 0.6rem;
+    margin-right: 0.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.protuct .box-container .box .icon li i{
+    color: rgb(56, 52, 52);
+}
+
+.protuct .box-container .box .icon li:hover{
+    background-color: rgba(212, 200, 200,0.7);
+}
+
+
+
+.about .about-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about .about-container .image img{
+    width: 30rem;
+    border-radius: 4px;
+}
+
+.about .about-container .about{
+    flex: 1 1 60px;
+}
+
+.about .about-container .about h3{
+    color: green;
+    font-size: 1.8rem;
+}
+
+.about .about-container .about p{
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+.about .about-container .about a{
+    border: 1px solid rgb(148, 143, 143,0.5);
+    padding: 8px 20px;
+    background-color: rgb(110, 102, 102);
+    color: white;
+}
+
+
+
+
+.service h2{
+    color: green;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 830px) {
+    #menu{
+        display: block;
+    }
+
+    header img{
+        width: 9rem;
+    }
+
+    header ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        display: none;
+    }
+    header ul li{
+        display: block;
+        text-align: center;
+        margin-top: 1.5rem;
+        font-size: 16px;
+    }
+    
+    .home{
+        display: block;
+        background-image: url('/image/12.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .home .content{
+        width: 100%;
+        padding: 4rem 3rem;
+        padding-bottom: 8rem;
+    }
+
+    .home .content h2{
+        font-size: 2.2rem;
+    }
+
+    .home .content p{
+        padding: 0.8rem 0;
+        font-size: 1.3rem;
+    }
+
+    .home .content a{
+        padding: 0.4rem;
+        
+    }
+
+}
+
