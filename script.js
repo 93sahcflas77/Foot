@@ -101,3 +101,75 @@ const product_container = document.querySelector(".box-container");
 
     console.log(element);
  });   
+
+
+
+ const Student_details = [{
+    Name : "Chandan Thakur",
+    Age: "22 years",
+    Educatin: [
+        {
+            Class : "10th",
+            School_name : "N.V.N",
+            Address: [
+                {
+                    Line_name: "rakdhi",
+                    Zipcode: "302006",
+                    State: Jaipur
+                }
+            ],
+            Exam: "20 April",
+            Subject : ["Hindi" , "English" , "Math" , "Science"]
+        },
+        {
+            Class : "12th",
+            School_name : "N.V.N",
+            Address: [
+                {
+                    Line_name: "rakdhi",
+                    Zipcode: "302006",
+                    State: Jaipur
+                }
+            ],
+            Exam: "20 April",
+            Subject : ["Hindi" , "English" , "Math" , "Science"]
+        }
+    ]
+ },
+ {
+    Name : "Ravi gupta",
+    Age: "22 years",
+    Educatin: [
+        {
+            Class : "10th",
+            School_name : "",
+            Address: [
+                {
+                    Line_name: "rakdhi",
+                    Zipcode: "302006",
+                    State: Jaipur
+                }
+            ],
+            Exam: "20 April",
+            Subject : ["Hindi" , "English" , "Math" , "Science"]
+        },
+        {
+            Class : "12th",
+            School_name : "N.V.N",
+            Address: [
+                {
+                    Line_name: "rakdhi",
+                    Zipcode: "302006",
+                    State: Jaipur
+                }
+            ],
+            Exam: "20 April",
+            Subject : ["Hindi" , "English" , "Math" , "Science"]
+        }
+    ]
+ }
+
+
+
+
+]
