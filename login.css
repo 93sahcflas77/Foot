@@ -1,0 +1,74 @@
+body {
+    /* background: gray; */
+}
+
+.box-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    display: flex;
+    /* padding: 0 40px; */
+    justify-content: space-around;
+    height: 30rem;
+
+    border-radius: 50px;
+    background: linear-gradient(145deg, #c8bebe, #eee2e2);
+    box-shadow: 20px 20px 100px #595454,
+        -20px -20px 100px #ffffff;
+}
+
+.box-container>div {
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.box-container .button a {
+    display: block;
+    padding: 10px 35px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 19px;
+}
+
+.box-container .button a:nth-child(1) {
+    background-color: blue;
+}
+
+.box-container .button a:nth-child(2) {
+    background-color: skyblue;
+}
+
+.box-container .button a:nth-child(3) {
+    background-color: red;
+}
+
+.box-container>div:nth-child(1) {
+    background-color: #0F2167;
+    padding: 20px 40px;
+    flex: 1 0 270px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.box-container>div:nth-child(1) p {
+    color: white;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+
+.box-container>div:nth-child(2) {
+    background-color: white;
+    flex: 1 0 480px;
+}
