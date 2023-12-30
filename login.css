@@ -72,3 +72,13 @@ body {
     background-color: white;
     flex: 1 0 480px;
 }
+
+
+.box-container .box-2{
+    width: 100%;
+}
+
+
+.box-container .box-2 h1{
+    text-align: center;
+}
