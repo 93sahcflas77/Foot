@@ -169,7 +169,4 @@ const product_container = document.querySelector(".box-container");
     ]
  }
 
-
-
-
 ]
