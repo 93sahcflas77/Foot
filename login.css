@@ -10,13 +10,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-
     display: flex;
-    /* padding: 0 40px; */
     justify-content: space-around;
     height: 30rem;
-
+    /* visibility: hidden; */
     border-radius: 50px;
     background: linear-gradient(145deg, #c8bebe, #eee2e2);
     box-shadow: 20px 20px 100px #595454,
@@ -71,9 +68,10 @@ body {
 }
 
 
-.box-container>div:nth-child(2) {
-    background-color: white;
+.box-container>div:nth-child(2){
+    /* background-color: white; */
     flex: 1 0 400px;
+    background-color: gray;
 }
 
 
@@ -94,29 +92,30 @@ body {
     margin-bottom: 1.5px;
 }
 
-.box-container .box-2 P{
+.box-container .box-2 P {
     text-align: center;
     margin: 0 0 40PX 0;
 }
 
-.box-container .box-2 P span{
+.box-container .box-2 P a , .box-3 a{
     color: blue;
-    font-size: 20px;
+    font-size: 22px;
+    text-decoration: none;
 }
 
-.box-container .box-2 form{
+
+.box-container .box-2 form , .box-3 form{
     display: flex;
     flex-direction: column;
     gap: 15px;
     width: 100%;
 }
 
-.box-container .box-2 form input::placeholder{
+.box-container .box-2 form input::placeholder , .box-3 form input::placeholder{
     color: #0F2167;
-    
 }
 
-.box-container .box-2 form .label{
+.box-container .box-2 form .label , .box-3 form .label{
     display: block;
     font-family: 'Times New Roman', Times, serif;
     font-size: 22px;
@@ -138,7 +137,8 @@ body {
     justify-content: space-around;
 }
 
-.box-container .box-2 form button{
+.box-container .box-2 .btn{
+    width: 100%;
     display: block;
     outline: none;
     border: none;
@@ -149,4 +149,76 @@ body {
     font-weight: 700;
     font-size: 22px;
     border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.box-container .box-2 .error{
+    display: block;
+    font-size: 20px;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    text-align: right;
+    visibility: hidden;
+    transition: .5s;
+}
+
+
+
+/* box3 */
+.box-3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    background-color: white;
+    width: 32rem;
+    height: 25rem;
+    display: flex;   
+    flex-direction: column;
+    border-radius: 5px;
+    visibility: hidden;
+    background: linear-gradient(145deg, #c8bebe, #eee2e2);
+    box-shadow: 20px 20px 100px #595454,
+        -20px -20px 100px #ffffff;
+}
+
+.box-3 h1{
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-shadow: 2px 0px 2px gray;
+    margin-bottom: 1.5px;
+}
+
+.box-3 P {
+    text-align: center;
+    margin: 0 0 40PX 0;
+}
+
+.box-3 form input{
+    width: 95%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid wheat;
+}
+
+.box-3 form #btn{
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    padding: 12px 0px;
+    background-color: #0F2167;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
 }
