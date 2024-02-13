@@ -136,12 +136,14 @@ function ProductId(id){
     bagCount()
 
 }
+let data = [];
 
+const cart_container = document.querySelector(".card-container");
 
 function bagCount(){
 
     
-    let data = [];
+    // let data = [];
 
     
     const localStorage_get123 = localStorage.getItem("product");
@@ -163,7 +165,7 @@ function bagCount(){
 
 
     const bagItem = document.getElementById("bag");
-    bagItem.innerHTML = split.length;
+    bagItem.innerHTML = data.length;
 
     
 }
