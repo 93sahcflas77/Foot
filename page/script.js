@@ -84,7 +84,7 @@ product.forEach(element => {
                 <div>
                     <img src="${element.url}" alt="">
                 </div>
-                <h3>${element.Product_name}</h3>
+                <h3 id="product_name">${element.Product_name}</h3>
                 <ul class="star">
                     <li><i class="fa-solid fa-star"></i></li>
                     <li><i class="fa-solid fa-star"></i></li>
@@ -126,46 +126,99 @@ window.addEventListener("load", (event) => {
     bagCount();
   });
 
+
 const produect_id = [];
+
 
 function ProductId(id){
 
 
-    produect_id.push(id);
+    if(!produect_id.includes(id)){
+        produect_id.push(id);
+    }else{
+        console.log("Aleardy add");
+    }
+
     localStorage.setItem("product", produect_id);
-    bagCount()
+
+    bagCount();
 
 }
-let data = [];
 
-const cart_container = document.querySelector(".card-container");
+
+const cart_container = document.querySelector("#fetch_data");
+// console.log(cart_container.innerHTML = );
+
 
 function bagCount(){
 
-    
-    // let data = [];
+    let data = [];
 
-    
     const localStorage_get123 = localStorage.getItem("product");
     let split = localStorage_get123.split(",");
 
-    split.forEach((element) =>{
-        if(!data.includes(element)){
-            data.push(element); 
-        }
-    });
+            data.push(...split);
+
+    console.log(data);
 
     product.forEach((element) =>{
         for(let i = 0; i < data.length; i++){
             if(data[i] == element.id){
-                console.log(element);
+
+
+            cart_container.innerHTML += `
+            <tr>
+            <td class="flex">
+                <img src="${element.url}"
+                    alt="">
+
+                    <div class="product_name">
+                    <h2>${element.Product_name}</h2>
+
+                    <ul class="fa-star5">
+                        <li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        </li>
+                        <li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        </li>
+                        <li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        </li>
+                        <li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        </li>
+                        <li>
+                        <li><i class="fa-solid fa-star-half"></i></li>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+            <td>
+               <span>${element.rate}</span>
+            </td>
+            <td>
+                <div>
+                    <span class="Dec">-</span>
+                    <span class="total_item">1</span>
+                    <span class="Ine">+</span>
+                </div>
+            </td>
+            <td>
+                <h3>$20.25</h3>
+            </td>
+            <td>
+                <i class="fa-solid fa-xmark"></i>
+            </td>
+        </tr>
+            `
             }
         }
     });    
 
 
     const bagItem = document.getElementById("bag");
-    bagItem.innerHTML = data.length;
+    bagItem.innerHTML = split.length;
 
     
 }
@@ -234,7 +287,18 @@ function bagCount(){
 
 
 
+const cart = document.querySelector("#dispaly_cart");
+const cart_details = document.querySelector("#cart_container");
 
+cart.addEventListener( "click" , () => {
+
+    cart_details.style.visibility = "visible";
+
+    // cart.style.display = "none";
+
+    // cart.classList.toggle('fa-xmark');
+
+});
 
 
 
@@ -374,5 +438,50 @@ function bagCount(){
 // }
 
 // ]
+
+
+// const _product = document.querySelectorAll(".box");
+    
+//     _product.forEach((e) => {
+//         let data = e.querySelector("h3").textContent.toUpperCase();
+//             console.log(data);
+
+//             console.log(data == "ORGANIC BANANA");
+
+//         if(data == "ORGANIC BANANA"){
+//             e.style.displsy = "block"
+//         }else{
+//             e.style.display = "none"
+//         }
+
+//     });
+
+
+
+
+function search(){
+
+    const input = document.querySelector("#search").value.toUpperCase();
+    console.log(input)
+
+    const _product = document.querySelectorAll(".box");
+    
+    _product.forEach((e) => {
+        
+        let data = e.querySelector("h3").textContent.toUpperCase();
+
+    
+        if(data === input){
+            e.style.display = "block";
+            
+        }else{
+            e.style.display = "none"
+        }
+    
+    });
+
+
+}
+
 
 

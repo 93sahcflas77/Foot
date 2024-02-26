@@ -556,3 +556,91 @@ header ul li:nth-child(7) span{
 
 }
 
+
+
+/* card-container */
+.card-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: rgb(243, 240, 235);
+    margin: 30px auto;
+    padding: 30px;
+    width: 65%;
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    visibility: hidden;
+    transition: 0.9s;
+    border-radius: 10px/20px;
+    box-shadow: 8px 21px 30px  -5px rgba(0,0,0,0.1);
+}
+
+
+.card-container > h1{
+    margin: 8px auto;
+    text-transform: capitalize;
+    color: rgb(46, 42, 42);
+    font-weight: 900;
+    font-size: 28px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.card-container .item{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-container .item table{
+    width: 70%;
+    padding: 10px;
+}
+
+
+.card-container .item table th, .card-container .item table td{
+    border-bottom: 2px solid rgb(211, 205, 205);
+    color: gray;
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+
+
+.card-container .item table td{
+    margin-left: 20px;
+}
+
+.fa-star5{
+    display: flex;
+    gap: 3px;
+}
+
+.fa-star5 i{
+    color: gold;
+}
+
+.card-container .item table tbody .flex{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.card-container .item table tbody img{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    mix-blend-mode: multiply;
+}
+
+.card-container .item table tbody .flex .product_name h2{
+    font-size: 20px;
+    color: rgb(77, 70, 70);
+}
+
+#search{
+    border-bottom: 1px solid rgb(133, 128, 128);
+    padding: 10px;
+}
