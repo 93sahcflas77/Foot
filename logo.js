@@ -50,7 +50,7 @@ function signProfile(){
     console.log(email1.value);
     console.log(password1.value);
     container.style.visibility = "hidden"
-    location.href = "https://turbo-funicular-4jwjq594x5r3q57p-5504.app.github.dev/page/index.html"   //not work
+    location.href = "https://sturdy-guacamole-4j7jxqq4g7q9cx9x-5505.app.github.dev//page/index.html"   //not work
   }else{
     alert("Invalid username and password");
   }
@@ -63,6 +63,6 @@ function signProfile(){
 
 
 function Redirect() {
-  location.href ="https://turbo-funicular-4jwjq594x5r3q57p-5504.app.github.dev/page/index.html";
+  location.href ="https://sturdy-guacamole-4j7jxqq4g7q9cx9x-5505.app.github.dev//page/index.html";
   // console.log("Hii");
 }

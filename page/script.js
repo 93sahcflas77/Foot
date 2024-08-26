@@ -107,66 +107,22 @@ product.forEach(element => {
     // console.log(element);
 });
 
-
-// function ProductId(val){
-//     produect_id.push(val);
-// }
-
-
+const produect_id = [];
 
 // console.log(produect_id);
-// console.log(product.length);
-
-// let product_id = [];
-
-// let getlocal = localStorage.getItem("product");
-// product_id = JSON.parse(getlocal);
-
-window.addEventListener("load", (event) => {
-    bagCount();
-  });
-
-
-const produect_id = [];
 
 
 function ProductId(id){
 
+    const element = product.find((val) => val.id === id);
+    produect_id.push(element);
+    console.log(produect_id);
+    
+    console.log(element.id);
 
-    if(!produect_id.includes(id)){
-        produect_id.push(id);
-    }else{
-        console.log("Aleardy add");
-    }
+    const cart_container = document.querySelector("#fetch_data");
 
-    localStorage.setItem("product", produect_id);
-
-    bagCount();
-
-}
-
-
-const cart_container = document.querySelector("#fetch_data");
-// console.log(cart_container.innerHTML = );
-
-
-function bagCount(){
-
-    let data = [];
-
-    const localStorage_get123 = localStorage.getItem("product");
-    let split = localStorage_get123.split(",");
-
-            data.push(...split);
-
-    console.log(data);
-
-    product.forEach((element) =>{
-        for(let i = 0; i < data.length; i++){
-            if(data[i] == element.id){
-
-
-            cart_container.innerHTML += `
+    cart_container.innerHTML += `
             <tr>
             <td class="flex">
                 <img src="${element.url}"
@@ -212,16 +168,216 @@ function bagCount(){
             </td>
         </tr>
             `
-            }
-        }
-    });    
-
-
-    const bagItem = document.getElementById("bag");
-    bagItem.innerHTML = split.length;
-
+    bagCount();
     
 }
+
+window.addEventListener("load", (event) => {
+    bagCount();
+  });
+
+const bag = document.querySelector("#bag");
+console.log(bag);
+
+
+function bagCount(){
+    bag.innerHTML = produect_id.length;
+};    
+
+
+// function ProductId(val){
+//     produect_id.push(val);
+// }
+
+
+
+// console.log(produect_id);
+// console.log(product.length);
+
+// let product_id = [];
+
+// let getlocal = localStorage.getItem("product");
+// product_id = JSON.parse(getlocal);
+
+// window.addEventListener("load", (event) => {
+//     bagCount();
+//   });
+
+
+// const produect_id = [];
+
+// console.log(produect_id);
+
+
+// function ProductId(id){
+
+
+    // if(!produect_id.includes(id)){
+    //     console.log("Aleardy add");
+    // }else{
+    //     produect_id.push(id);
+    // }
+
+    // localStorage.setItem("product", produect_id);
+
+    // bagCount();
+
+
+
+// }
+
+
+// const cart_container = document.querySelector("#fetch_data");
+// console.log(cart_container.innerHTML = );
+
+// let data = [];
+
+// function bagCount(){
+
+    
+
+//     const localStorage_get123 = localStorage.getItem("product");
+//     let split = localStorage_get123.split(",");
+
+//             data.push(...split);
+
+//     console.log(data);
+
+//     product.forEach((element) =>{
+//         for(let i = 0; i < data.length; i++){
+//             if(data[i] == element.id){
+
+
+//             cart_container.innerHTML += `
+//             <tr>
+//             <td class="flex">
+//                 <img src="${element.url}"
+//                     alt="">
+
+//                     <div class="product_name">
+//                     <h2>${element.Product_name}</h2>
+
+//                     <ul class="fa-star5">
+//                         <li>
+//                         <li><i class="fa-solid fa-star"></i></li>
+//                         </li>
+//                         <li>
+//                         <li><i class="fa-solid fa-star"></i></li>
+//                         </li>
+//                         <li>
+//                         <li><i class="fa-solid fa-star"></i></li>
+//                         </li>
+//                         <li>
+//                         <li><i class="fa-solid fa-star"></i></li>
+//                         </li>
+//                         <li>
+//                         <li><i class="fa-solid fa-star-half"></i></li>
+//                         </li>
+//                     </ul>
+//                 </div>
+//             </td>
+//             <td>
+//                <span>${element.rate}</span>
+//             </td>
+//             <td>
+//                 <div>
+//                     <span class="Dec">-</span>
+//                     <span class="total_item">1</span>
+//                     <span class="Ine">+</span>
+//                 </div>
+//             </td>
+//             <td>
+//                 <h3>$20.25</h3>
+//             </td>
+//             <td>
+//                 <i class="fa-solid fa-xmark"></i>
+//             </td>
+//         </tr>
+//             `
+//             }
+//         }
+//     });    
+
+
+// function bagCount(){
+
+    
+
+//     const localStorage_get123 = localStorage.getItem("product");
+//     let split = localStorage_get123.split(",");
+
+//             data.push(...split);
+
+//     console.log(data);
+
+//     product.forEach((element) =>{
+//         for(let i = 0; i < data.length; i++){
+//             if(data[i] == element.id){
+
+
+//             cart_container.innerHTML += `
+//             <tr>
+//             <td class="flex">
+//                 <img src="${element.url}"
+//                     alt="">
+
+//                     <div class="product_name">
+//                     <h2>${element.Product_name}</h2>
+
+//                     <ul class="fa-star5">
+//                         <li>
+//                         <li><i class="fa-solid fa-star"></i></li>
+//                         </li>
+//                         <li>
+//                         <li><i class="fa-solid fa-star"></i></li>
+//                         </li>
+//                         <li>
+//                         <li><i class="fa-solid fa-star"></i></li>
+//                         </li>
+//                         <li>
+//                         <li><i class="fa-solid fa-star"></i></li>
+//                         </li>
+//                         <li>
+//                         <li><i class="fa-solid fa-star-half"></i></li>
+//                         </li>
+//                     </ul>
+//                 </div>
+//             </td>
+//             <td>
+//                <span>${element.rate}</span>
+//             </td>
+//             <td>
+//                 <div>
+//                     <span class="Dec">-</span>
+//                     <span class="total_item">1</span>
+//                     <span class="Ine">+</span>
+//                 </div>
+//             </td>
+//             <td>
+//                 <h3>$20.25</h3>
+//             </td>
+//             <td>
+//                 <i class="fa-solid fa-xmark"></i>
+//             </td>
+//         </tr>
+//             `
+//             }
+//         }
+//     });    
+
+
+//     const bagItem = document.getElementById("bag");
+//     bagItem.innerHTML = split.length;
+
+    
+// }
+
+
+//     const bagItem = document.getElementById("bag");
+//     bagItem.innerHTML = split.length;
+
+    
+// }
 
 
 
@@ -299,17 +455,6 @@ cart.addEventListener( "click" , () => {
     // cart.classList.toggle('fa-xmark');
 
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
